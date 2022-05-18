@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum
     name: Contract
-    network: mainnet
+    network: zkSync2-testnet
     source:
       address: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
       abi: Contract

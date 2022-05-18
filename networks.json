@@ -1,5 +1,5 @@
 {
-  "mainnet": {
+  "zkSync2-testnet": {
     "Contract": {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
     }
