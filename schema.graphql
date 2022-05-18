@@ -1,6 +1,5 @@
-type ExampleEntity @entity {
-  id: ID!
-  count: BigInt!
-  previousAdmin: Bytes! # address
-  newAdmin: Bytes! # address
+type User @entity {
+	id: ID!
+	totalTransfers: BigInt!
+	totalAmount: BigInt!
 }

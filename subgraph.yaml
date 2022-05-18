@@ -1,4 +1,4 @@
-specVersion: 0.0.1
+specVersion: 0.0.2
 schema:
   file: ./schema.graphql
 dataSources:
@@ -6,21 +6,18 @@ dataSources:
     name: Contract
     network: mainnet
     source:
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+      address: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
       abi: Contract
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - AdminChanged
-        - Upgraded
+        - Transfer
       abis:
         - name: Contract
           file: ./abis/Contract.json
       eventHandlers:
-        - event: AdminChanged(address,address)
-          handler: handleAdminChanged
-        - event: Upgraded(address)
-          handler: handleUpgraded
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
       file: ./src/mapping.ts
